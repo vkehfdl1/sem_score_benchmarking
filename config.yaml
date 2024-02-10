@@ -21,7 +21,7 @@ node_lines:
         modules:
         - module_type: llama_index_llm
           llm: vllm
-          model: [ mistralai/Mistral-7B-Instruct-v0.2, meta-llama/Llama-2-7b-chat-hf ]
+          model: [ meta-llama/Llama-2-7b-chat-hf, mistralai/Mistral-7B-Instruct-v0.2 ]
           batch: 8
         - module_type: llama_index_llm
           llm: openai
