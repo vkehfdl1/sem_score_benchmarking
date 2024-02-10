@@ -12,8 +12,8 @@ Really straightforward, right?
 ## Benchmarking
 
 I used Eli5 dataset for benchmarking at [here](https://huggingface.co/datasets/MarkrAI/eli5_sample_autorag).
-I use 4 models (gpt-4-turbo, gpt-3.5-turbo, davincii-002, mistral-7B) for benchmarking.
-And 3 metrics (BLEU, ROUGE, METEOR) plus sem score.
+I use four models (text-davinci-002, text-babbage-001, gpt-3.5-turbo-0125, mistral-7B) for benchmarking.
+And three metrics (BLEU, ROUGE, METEOR) plus sem score.
 And I evaluated all models results manually like the paper did.
 
 You can see the config YAML file at [config.yaml](config.yaml).
