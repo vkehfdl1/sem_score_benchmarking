@@ -6,7 +6,7 @@ from autorag import generator_models
 from llama_index.llms import Vllm
 
 root_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-data_path = os.path.join(root_path, 'data', 'eli5')
+data_path = os.path.join(root_path, 'data')
 
 
 @click.command()
