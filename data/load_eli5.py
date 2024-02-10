@@ -23,6 +23,7 @@ def load_eli5_dataset(save_path):
         raise ValueError("qa.parquet already exists")
     corpus_dataset.to_parquet(os.path.join(save_path, "corpus.parquet"))
     qa_test_dataset = qa_test_dataset.sample(200)
+    qa_test_dataset = qa_test_dataset.reset_index(drop=True)
     qa_test_dataset.to_parquet(os.path.join(save_path, "qa_test.parquet"))
 
 
