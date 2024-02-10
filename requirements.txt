@@ -1,2 +1,4 @@
 AutoRAG>=0.0.6
 vllm
+click
+datasets
