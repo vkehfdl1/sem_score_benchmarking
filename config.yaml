@@ -23,7 +23,9 @@ node_lines:
           llm: vllm
           model: [ mistralai/Mistral-7B-Instruct-v0.2 ]
           batch: 8
+          max_tokens: 512
         - module_type: llama_index_llm
           llm: openai
           model: gpt-3.5-turbo-0125
           batch: 2
+          max_tokens: 512
