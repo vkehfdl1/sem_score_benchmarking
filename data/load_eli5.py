@@ -22,7 +22,12 @@ def load_eli5_dataset(save_path):
     if os.path.exists(os.path.join(save_path, "qa.parquet")) is True:
         raise ValueError("qa.parquet already exists")
     corpus_dataset.to_parquet(os.path.join(save_path, "corpus.parquet"))
-    qa_test_dataset = qa_test_dataset.sample(200)
+
+    # preprocess
+    qa_test_dataset['gen_gt_len'] = qa_test_dataset['generation_gt'].apply(lambda x: len(x[0]))
+    qa_test_dataset = qa_test_dataset[qa_test_dataset['gen_gt_len'] < 2000]
+    qa_test_dataset.drop(columns=['gen_gt_len'])
+    qa_test_dataset = qa_test_dataset.sample(200, random_state=42)
     qa_test_dataset = qa_test_dataset.reset_index(drop=True)
     qa_test_dataset.to_parquet(os.path.join(save_path, "qa_test.parquet"))
 
