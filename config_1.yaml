@@ -24,8 +24,3 @@ node_lines:
           model: [ MarkrAI/RAG-KO-Mixtral-7Bx2-v2.1 ]
           batch: 2
           max_new_tokens: 512
-        - module_type: llama_index_llm
-          llm: openai
-          model: gpt-4-0125-preview
-          batch: 2
-          max_tokens: 512
