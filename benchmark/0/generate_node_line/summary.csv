@@ -1,0 +1,3 @@
+node_type,best_module_filename,best_module_name,best_module_params,best_execution_time
+prompt_maker,0.parquet,fstring,{'prompt': 'Read the passages and answer the given question. \n Question: {query} \n Passage: {retrieved_contents} \n Answer : '},9.211301803588868e-06
+generator,0.parquet,llama_index_llm,"{'llm': 'vllm', 'model': 'mistralai/Mistral-7B-Instruct-v0.2', 'batch': 8, 'max_new_tokens': 512}",1.8983828401565552
